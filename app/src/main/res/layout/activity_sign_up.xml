@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.aych.chatsnap.SignUpActivity"
+                style="@style/AuthBackground">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:src="@drawable/background"
+        style="@style/AuthBackgroundImage"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:text="@string/app_name"
+        style="@style/AuthTitle"/>
+
+    <TextView
+
+        android:id="@+id/subtitle"
+        android:text="@string/app_subtitle"
+        style="@style/AuthTitle.AuthSubTitle"/>
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        style="@style/AuthFieldContainer">
+
+    <EditText
+        style="@style/AuthEditText"
+        android:id="@+id/usernameField"
+        android:hint="Username">
+
+        <requestFocus/>
+     </EditText>
+
+    <EditText
+        style="@style/AuthEditText"
+        android:inputType="textPassword"
+        android:id="@+id/passwordField"
+        android:hint="Password"/>
+
+    <EditText
+        style="@style/AuthEditText"
+        android:id="@+id/emailField"
+        android:hint="Email"/>
+
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/buttonDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLayout"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/button_divider"
+        android:contentDescription="@string/content_desc_button_divider"/>
+
+    <Button
+        android:text="@string/sign_up_button_label"
+        android:id="@+id/signUpButton"
+        style="@style/AuthButton"
+        android:layout_below = "@id/editTextLayout"
+        android:layout_alignParentLeft = "true"
+        android:layout_toLeftOf="@id/buttonDivider"
+        android:layout_marginRight="0dp"/>
+
+    <Button
+        android:text="@string/cancel_button_label"
+        android:id="@+id/cancelButton"
+        style="@style/AuthButton"
+        android:layout_below = "@id/editTextLayout"
+        android:layout_alignParentRight = "true"
+        android:layout_toRightOf="@id/buttonDivider"
+        android:layout_marginLeft="0dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent">
+
+        <RelativeLayout
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inbox_horizontal_margin"
+            android:layout_marginRight="@dimen/inbox_horizontal_margin"
+            android:layout_marginTop="@dimen/inbox_vertical_margin"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/messageIcon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_picture"
+                android:contentDescription="@string/content_desc_message_icon"
+                android:layout_alignBottom="@+id/timeLabel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:text="There will be a name here"
+                android:id="@+id/senderLabel"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/message_vertical_padding"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/messageIcon"
+                android:layout_toStartOf="@+id/messageIcon"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/timeLabel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:layout_below="@id/senderLabel"
+                android:layout_toLeftOf="@id/messageIcon"
+                android:paddingBottom="@dimen/message_vertical_padding"
+                android:textSize="12sp"
+                android:textColor="@color/light_gray"/>
+        </RelativeLayout>
+
+</LinearLayout>

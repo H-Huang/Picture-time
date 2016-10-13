@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.aych.chatsnap.RecipientsActivity">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignRight="@android:id/empty"
+        android:layout_alignEnd="@android:id/empty"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@android:id/empty"
+        android:text="@string/empty_recipients_list_message"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backImageView"
+            android:src="@drawable/ic_menu_send"
+            android:tint="@android:color/holo_purple"
+            android:layout_weight="1"
+            android:layout_marginRight="100dp"
+            android:focusableInTouchMode="false"
+            android:rotation="180"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendImageView"
+            android:src="@drawable/ic_menu_send"
+            android:tint="@android:color/holo_purple"
+            android:layout_weight="1"
+            android:layout_marginLeft="100dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
